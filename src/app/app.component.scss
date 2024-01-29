@@ -1,0 +1,16 @@
+app-contact-me{
+    position: relative;
+    z-index: 1000
+}
+
+.light{
+    background-color: white;
+}
+
+.dark{
+    color: #fff;
+    background: #0e081b;
+    background-image: url("../assets/img/background/Dark-1.png"), url("../assets/img/background/Dark-2.png");
+    background-repeat: repeat-x, repeat;
+    
+}

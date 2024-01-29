@@ -1,0 +1,45 @@
+.home-hero__socials {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    padding: 0.5rem;
+    border-radius: 0 20px 20px 0;
+}
+
+
+.home-hero__socials {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    padding: 0.5rem;
+}
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+div {
+    display: block;
+}
+
+.home-hero__social-icon-link {
+    width: 5vw;
+    display: block;
+    padding: 1rem;
+    transition: background .3s;
+    border-radius: 5px;cursor: pointer;
+}
+
+.home-hero__social-icon{
+    width: 100%;
+    height: auto;
+}
+
+.home-hero__social-icon-link:hover {
+    background-color: lightgray; /* Cambia el color de fondo al pasar el cursor */
+}

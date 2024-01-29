@@ -1,0 +1,27 @@
+<div class="container m-5">
+    <div class="row">
+        <span class="content" routerLink="/about">
+            <span class="line" [ngClass]="{'large-line': isRouteActive('/about')}"></span>About
+        </span>
+    </div>
+    <div class="row">
+        <span class="content" routerLink="/experience">
+            <span class="line" [ngClass]="{'large-line': isRouteActive('/experience')}"></span>Experience
+        </span>
+    </div>
+    <div class="row">
+        <span class="content" routerLink="/portfolio">
+            <span class="line" [ngClass]="{'large-line': isRouteActive('/portfolio')}"></span>Portfolio
+        </span>
+    </div>
+    <div class="row">
+        <span class="content" routerLink="/skills">
+            <span class="line" [ngClass]="{'large-line': isRouteActive('/skills')}"></span>Skills
+        </span>
+    </div>
+    <div class="row">
+        <span class="content" routerLink="/lets-talk">
+            <span class="line" [ngClass]="{'large-line': isRouteActive('/lets-talk')}"></span> Let's talk
+        </span>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    height: 15%;
+}
+
+.body {
+    height: 85%;
+    display: flex;
+}
+
+.col-md-4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-container {
+    height: 100%;
+    width: 33.33%; // Ocupa un tercio del ancho de col-md-4
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-8 {
+    flex: 2; // Ocupa dos tercios del ancho de col-md-8
+}
+
+.router-container {
+    height: 100%;
+    overflow-y: auto;
+    
+}

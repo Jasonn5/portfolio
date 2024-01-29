@@ -1,0 +1,4 @@
+<div [ngClass]="themeService.getTheme()  ? 'dark' : 'light'">
+    <app-contact-me></app-contact-me>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="emailForm">
+        <div class="form-group">
+            <label><b>Asunto</b></label>
+            <input type="text" class="form-control" formControlName="subject">
+        </div>
+        <div class="form-group">
+            <label><b>Email</b></label>
+            <input type="email" class="form-control" formControlName="email_from">
+        </div>
+        <div class="form-group">
+            <label><b>Mensaje</b></label>
+            <textarea class="form-control"cols="30" rows="5"  formControlName="message"></textarea>
+        </div>
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary" (click)="sendEmail()" [disabled]="emailForm.invalid">Send</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+.row {
+    padding-bottom: 1.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    .content {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.line {
+    width: 30px;
+    border-bottom: 2px solid black;
+    transition: width 0.3s ease;
+    margin-right: 5px;
+}
+
+.large-line {
+    width: 60px;
+}
+
+.content:hover .line {
+    width: 60px;
+}
