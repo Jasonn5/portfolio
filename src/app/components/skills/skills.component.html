@@ -1,9 +1,15 @@
-<div class="row" *ngFor="let category of categories">
-  <h1>{{category.name}}</h1>
-  <div class="col-md-4 mb-2" *ngFor="let skill of category.skills">
-    <div class="card">
-      <img src="{{skill.icon}}">
-      <h5 class="text-center">{{skill.title}}</h5>
+<div class="container">
+  <div class="row" *ngFor="let category of categories">
+    <h1>{{category.name}}</h1>
+    <div class="col-md-3 mb-2" *ngFor="let skill of category.skills">
+      <div class="card-dark">
+        <div class="row text-center mt-2">
+          <img src="{{skill.icon}}" class="card-image" loading="lazy" alt="{{skill.title}}">
+        </div>
+        <div class="row text-center">
+          <h6>{{skill.title}}</h6>
+        </div>
+      </div>
     </div>
   </div>
 </div>

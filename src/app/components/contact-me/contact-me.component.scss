@@ -15,7 +15,7 @@
     transform: translateY(-50%);
     background: #fff;
     box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
-    padding: 0.5rem;
+    width: 6.5vw;
 }
 *, ::after, ::before {
     margin: 0;
@@ -28,9 +28,9 @@ div {
 }
 
 .home-hero__social-icon-link {
-    width: 5vw;
+    width: 70%;
     display: block;
-    padding: 1rem;
+    margin: 40% 20%;
     transition: background .3s;
     border-radius: 5px;cursor: pointer;
 }
@@ -42,4 +42,24 @@ div {
 
 .home-hero__social-icon-link:hover {
     background-color: lightgray; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home-hero__socials {
+        width: 7.5vw;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .home-hero__socials {
+        width: 5.7vw;
+    }
+}
+
+@media (min-width: 1441px) {
+    .home-hero__socials {
+        width: 4.5vw;
+    }
 }
