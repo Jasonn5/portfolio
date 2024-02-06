@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
@@ -16,12 +15,14 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { LetsTalkComponent } from './components/lets-talk/lets-talk.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from "ng-recaptcha";
+import { ToastrModule } from 'ngx-toastr';
+import { environment } from 'src/environments/environment ';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
     SkillsComponent,
     PortfolioComponent,
     CertificationsComponent,
@@ -37,10 +38,16 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule,
+    RecaptchaV3Module,
+    ToastrModule.forRoot()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: environment.recaptcha.siteKey,
+    },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

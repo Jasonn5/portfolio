@@ -1,27 +1,69 @@
 <div class="container m-5">
     <div class="row">
+        <div [ngClass]="themeService.getTheme()  ? 'logo-light-theme' : 'logo-dark-theme'"></div>
+    </div>
+    <div class="row">
         <span class="content" routerLink="/about">
-            <span class="line" [ngClass]="{'large-line': isRouteActive('/about')}"></span>About
+            <span [ngClass]="{
+                'line-dark': themeService.getTheme(),
+                'line-light': !themeService.getTheme(),
+                'large-line': isRouteActive('/about')
+              }"></span>About
         </span>
     </div>
     <div class="row">
         <span class="content" routerLink="/experience">
-            <span class="line" [ngClass]="{'large-line': isRouteActive('/experience')}"></span>Experience
+            <span [ngClass]="{
+                'line-dark': themeService.getTheme(),
+                'line-light': !themeService.getTheme(),
+                'large-line': isRouteActive('/experience')}"></span>Experience
         </span>
     </div>
     <div class="row">
         <span class="content" routerLink="/portfolio">
-            <span class="line" [ngClass]="{'large-line': isRouteActive('/portfolio')}"></span>Portfolio
+            <span [ngClass]="{
+                'line-dark': themeService.getTheme(),
+                'line-light': !themeService.getTheme(),
+                'large-line': isRouteActive('/portfolio')}"></span>Portfolio
         </span>
     </div>
     <div class="row">
         <span class="content" routerLink="/skills">
-            <span class="line" [ngClass]="{'large-line': isRouteActive('/skills')}"></span>Skills
+            <span [ngClass]="{
+                'line-dark': themeService.getTheme(),
+                'line-light': !themeService.getTheme(),
+                'large-line': isRouteActive('/skills')}"></span>Skills
         </span>
     </div>
     <div class="row">
         <span class="content" routerLink="/lets-talk">
-            <span class="line" [ngClass]="{'large-line': isRouteActive('/lets-talk')}"></span> Let's talk
+            <span [ngClass]="{
+                'line-dark': themeService.getTheme(),
+                'line-light': !themeService.getTheme(),
+                'large-line': isRouteActive('/lets-talk')}"></span> Let's talk
         </span>
+    </div>
+    <div class="row social-media-icons-container">
+        <div class="home-hero__social">
+            <a href="https://github.com/Jasonn5" class="home-hero__social-icon-link" target="_blank">
+                <img src="../../../assets/img/social_media/GitHub.webp" class="home-hero__social-icon" alt="GitHub">
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="https://www.linkedin.com/in/jeyson-valdivia/" class="home-hero__social-icon-link" target="_blank">
+                <img src="../../../assets/img/social_media/LinkedIn.webp" class="home-hero__social-icon" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="mailto:jasson.n021@gmail.com" class="home-hero__social-icon-link" target="_blank">
+                <img src="../../../assets/img/social_media/Gmail.webp" class="home-hero__social-icon" alt="Gmail">
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="https://www.instagram.com/jasson.n_n/" class="home-hero__social-icon-link" target="_blank">
+                <img src="../../../assets/img/social_media/Instagram.webp" class="home-hero__social-icon"
+                    alt="Instagram">
+            </a>
+        </div>
     </div>
 </div>

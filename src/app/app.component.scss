@@ -10,7 +10,13 @@ app-contact-me{
 .dark{
     color: #fff;
     background: #0e081b;
-    background-image: url("../assets/img/background/Dark-1.png"), url("../assets/img/background/Dark-2.png");
+    background-image: url("../assets/img/background/Dark-1.webp"), url("../assets/img/background/Dark-2.webp");
     background-repeat: repeat-x, repeat;
     
+}
+
+@media (max-width: 768px) {
+    app-contact-me{
+        display: none;
+    }
 }

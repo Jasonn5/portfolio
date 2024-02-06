@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
+import { ToastrService } from 'ngx-toastr';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
@@ -12,7 +14,9 @@ export class LetsTalkComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private emailService: EmailService
+    private emailService: EmailService,
+    private recaptchaV3Service: ReCaptchaV3Service,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -23,15 +27,20 @@ export class LetsTalkComponent implements OnInit {
     this.emailForm = this.formBuilder.group({
       subject: ["", [Validators.required]],
       email_from: ["", [Validators.required, Validators.email]],
-      message: ["", [Validators.required]]
+      message: ["", [Validators.required]],
     });
   }
 
   sendEmail() {
-    var message = this.emailForm.value;
-
-    this.emailService.sendEmail(message.subject, message.email_from, message.message).then(()=>{
-      console.log("sii");
+    this.recaptchaV3Service.execute('importantAction').subscribe((token: string) => {
+      console.log(token)
+      if (this.emailForm.valid) {
+        var message = this.emailForm.value;
+        this.emailService.sendEmail(message.subject, message.email_from, message.message).then(() => {
+          this.toastr.success('Email sent successfully', 'Success');
+          this.emailForm.reset();
+        });
+      }
     });
   }
 
@@ -39,7 +48,6 @@ export class LetsTalkComponent implements OnInit {
     return this.emailForm.get("subject");
   }
 
-  
   get email_from() {
     return this.emailForm.get("email_from");
   }
@@ -48,3 +56,4 @@ export class LetsTalkComponent implements OnInit {
     return this.emailForm.get("message");
   }
 }
+

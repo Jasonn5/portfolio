@@ -1,9 +1,27 @@
-.title{
+.title {
     font-size: 5rem;
 }
 
-p{
+p {
     font-size: 1.3rem;
-    margin-right: 8rem;
+    margin-right: 5rem;
     text-align: justify;
+}
+
+.btn-color {
+    color: white;
+    background-color: #7965d1;
+}
+
+@media (max-width: 768px) {
+    .info {
+        margin: 0 4%;
+
+        p {
+            margin-right: 0;
+        }
+        .btn {
+            font-size: 1.3rem;
+        }
+    }
 }

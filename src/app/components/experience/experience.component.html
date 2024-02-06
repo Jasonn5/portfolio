@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row p-4">
-        <div class="card p-3 mb-3" *ngFor="let experience of experiences">
+        <div class="p-3 mb-3" [ngClass]="themeService.getTheme()  ? 'card-dark' : 'card-light'" *ngFor="let experience of experiences">
             <div class="info">
                 <h5><b>{{experience.time}}</b></h5>
                 <h4><b>{{experience.role}} - {{experience.company}}</b></h4>
                 <p>{{experience.description}}</p>
                 <ul class="mt-2 flex flex-wrap">
                     <li class="m-1" *ngFor="let skill of experience.skills">
-                        <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300 ">
+                        <div class="flex items-center rounded-full px-3 py-1 text" [ngClass]="themeService.getTheme()  ? 'text-color-dark-theme text-backgorund-dark-theme' : 'text-backgorund-light-theme text-color-light-theme'">
                             {{skill.title}}</div>
                     </li>
                 </ul>

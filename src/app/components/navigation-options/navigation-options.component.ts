@@ -9,7 +9,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class NavigationOptionsComponent {
   public themeText = "noche";
-  constructor(private router: Router) {}
+  constructor(private router: Router,public themeService: ThemeService) {}
 
   isRouteActive(route: string): boolean {
     return this.router.isActive(route, true);

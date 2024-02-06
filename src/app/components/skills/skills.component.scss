@@ -1,0 +1,36 @@
+img.card-image {
+    width: auto;
+    max-height: 2.5rem;
+    object-fit: contain;
+}
+
+.text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-dark {
+    border-radius: 10px;
+    background-color: #cdc2cd8f;
+    height: 6rem;
+    overflow: hidden;
+    display: flex; /* Para que los elementos dentro de la tarjeta se comporten como flex-items */
+    flex-direction: column; /* Coloca los elementos hijos en una columna */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+}
+
+.row {
+    margin-bottom: 0.5rem;
+}
+
+.row.text-center {
+    flex: 4;
+    max-height: 4rem;
+}
+
+.row.text-center h6 {
+    flex: 1;
+    overflow: hidden;
+}

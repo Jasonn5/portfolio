@@ -7,7 +7,6 @@ import { ThemeService } from './services/theme.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{  
-  public isDarkTheme!: boolean;
 
   constructor(public themeService: ThemeService) {}
 
