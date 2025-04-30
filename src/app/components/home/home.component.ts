@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
   public isSidebarVisible: boolean = false;
-  constructor(public themeService: ThemeService) { }
+  public isMobileScreen: boolean;
+  constructor(public themeService: ThemeService) { 
+    this.isMobileScreen = window.innerWidth <= 768;
+  }
 
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
@@ -17,5 +19,9 @@ export class HomeComponent {
 
   hideSidebar() {
     this.isSidebarVisible = false;
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isMobileScreen = window.innerWidth <= 768;
   }
 }

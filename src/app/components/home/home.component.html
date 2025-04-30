@@ -78,10 +78,16 @@
                 </label>
             </div>
         </div>
-        <div [ngClass]="{ 'hide-sidebar': !isSidebarVisible }" class="sidebar">            
+        <div [ngClass]="{ 
+            'hide-sidebar': !isSidebarVisible,
+            'sidebar-dark': themeService.getTheme(),
+            'sidebar-light': !themeService.getTheme()
+        }" *ngIf="isMobileScreen">
             <app-navigation-options></app-navigation-options>
         </div>
-        <div class="router-container" [ngClass]="themeService.getTheme()  ? 'sroll-dark-theme' : 'sroll-light-theme'" (click)="hideSidebar()">
+
+        <div class="router-container" [ngClass]="themeService.getTheme()  ? 'sroll-dark-theme' : 'sroll-light-theme'"
+            (click)="hideSidebar()">
             <router-outlet></router-outlet>
         </div>
     </div>

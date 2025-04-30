@@ -15,10 +15,10 @@ img.card-image {
     background-color: #cdc2cd8f;
     height: 6rem;
     overflow: hidden;
-    display: flex; /* Para que los elementos dentro de la tarjeta se comporten como flex-items */
-    flex-direction: column; /* Coloca los elementos hijos en una columna */
-    justify-content: center; /* Centra verticalmente los elementos hijos */
-    align-items: center; /* Centra horizontalmente los elementos hijos */
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
