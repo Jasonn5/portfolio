@@ -1,66 +1,68 @@
-<div class="container m-5">
-    <div class="row">
-        <div [ngClass]="themeService.getTheme()  ? 'logo-light-theme' : 'logo-dark-theme'"></div>
+<div class="navigation-container">
+    <div class="logo-container">
+        <div [ngClass]="themeService.getTheme()  ? 'logo-light-theme lazyload' : 'logo-dark-theme lazyload'"></div>
     </div>
-    <div class="row">
-        <span class="content" routerLink="/about">
-            <span [ngClass]="{
+    <div class="options-container">
+        <div class="options">
+            <span class="content" routerLink="/about">
+                <span [ngClass]="{
                 'line-dark': themeService.getTheme(),
                 'line-light': !themeService.getTheme(),
                 'large-line': isRouteActive('/about')
               }"></span>About
-        </span>
-    </div>
-    <div class="row">
-        <span class="content" routerLink="/experience">
-            <span [ngClass]="{
+            </span>
+        </div>
+        <div class="options">
+            <span class="content" routerLink="/experience">
+                <span [ngClass]="{
                 'line-dark': themeService.getTheme(),
                 'line-light': !themeService.getTheme(),
                 'large-line': isRouteActive('/experience')}"></span>Experience
-        </span>
-    </div>
-    <div class="row">
-        <span class="content" routerLink="/portfolio">
-            <span [ngClass]="{
+            </span>
+        </div>
+        <div class="options">
+            <span class="content" routerLink="/portfolio">
+                <span [ngClass]="{
                 'line-dark': themeService.getTheme(),
                 'line-light': !themeService.getTheme(),
                 'large-line': isRouteActive('/portfolio')}"></span>Portfolio
-        </span>
-    </div>
-    <div class="row">
-        <span class="content" routerLink="/skills">
-            <span [ngClass]="{
+            </span>
+        </div>
+        <div class="options">
+            <span class="content" routerLink="/skills">
+                <span [ngClass]="{
                 'line-dark': themeService.getTheme(),
                 'line-light': !themeService.getTheme(),
                 'large-line': isRouteActive('/skills')}"></span>Skills
-        </span>
-    </div>
-    <div class="row">
-        <span class="content" routerLink="/lets-talk">
-            <span [ngClass]="{
+            </span>
+        </div>
+        <div class="options">
+            <span class="content" routerLink="/lets-talk">
+                <span [ngClass]="{
                 'line-dark': themeService.getTheme(),
                 'line-light': !themeService.getTheme(),
                 'large-line': isRouteActive('/lets-talk')}"></span> Let's talk
-        </span>
+            </span>
+        </div>
     </div>
-    <div class="row social-media-icons-container">
+    <div class="social-media-icons-container">
         <div class="home-hero__social">
             <a href="https://github.com/Jasonn5" class="home-hero__social-icon-link" target="_blank">
-                <img src="../../../assets/img/social_media/GitHub.webp" class="home-hero__social-icon" alt="GitHub">
+                <img src="../../../assets/img/social_media/GitHub.webp" class="home-hero__social-icon" alt="GitHub" loading="lazy">
             </a>
         </div>
         <div class="home-hero__social">
             <a href="https://www.linkedin.com/in/jeyson-valdivia/" class="home-hero__social-icon-link" target="_blank">
-                <img src="../../../assets/img/social_media/LinkedIn.webp" class="home-hero__social-icon" alt="LinkedIn">
+                <img src="../../../assets/img/social_media/LinkedIn.webp" class="home-hero__social-icon" alt="LinkedIn" loading="lazy">
             </a>
         </div>
         <div class="home-hero__social">
             <a href="mailto:jasson.n021@gmail.com" class="home-hero__social-icon-link" target="_blank">
-                <img src="../../../assets/img/social_media/Gmail.webp" class="home-hero__social-icon" alt="Gmail">
+                <img src="../../../assets/img/social_media/Gmail.webp" class="home-hero__social-icon" alt="Gmail" loading="lazy">
             </a>
         </div>
         <div class="home-hero__social">
-            <a href="https://www.instagram.com/jasson.n_n/" class="home-hero__social-icon-link" target="_blank">
+            <a href="https://www.instagram.com/jasson.n_n/" class="home-hero__social-icon-link" target="_blank" loading="lazy">
                 <img src="../../../assets/img/social_media/Instagram.webp" class="home-hero__social-icon"
                     alt="Instagram">
             </a>
