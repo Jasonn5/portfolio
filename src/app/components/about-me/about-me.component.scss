@@ -1,32 +1,139 @@
+.info {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
 .title {
     font-size: 5rem;
+    font-weight: bold;
+    animation: slideIn 1.2s ease-out;
+    color: var(--text);
 }
 
 p {
     font-size: 1.3rem;
-    margin-right: 5rem;
     text-align: justify;
+    max-width: 800px;
+    margin: 1rem auto;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    color: var(--text);
+}
+
+p.delay {
+    animation-delay: 0.5s;
 }
 
 .btn-color {
-    color: white;
-    background-color: #7965d1;
+    background-color: var(--btn);
+    color: var(--btn-text);
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-color:hover {
+    transform: scale(1.05);
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+
+    .btn-color {
+        font-size: 1.1rem;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @media (max-width: 768px) {
     .info {
         padding: 0 5%;
+    }
 
-        .title {
-            font-size: 3rem;
-        }
+    .title {
+        font-size: 3rem;
+    }
 
-        p {
-            margin-right: 0;
-            font-size: 1rem;
-        }
-        .btn-color {
-            font-size: 1.3rem;
-        }
+    p {
+        font-size: 1rem;
+    }
+
+    .btn-color {
+        font-size: 1.3rem;
     }
 }

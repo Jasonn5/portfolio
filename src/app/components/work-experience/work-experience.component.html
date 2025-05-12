@@ -1,0 +1,14 @@
+<div class="timeline-container">
+    <div class="timeline-line"></div>
+    <div *ngFor="let item of timeline; let i = index" class="timeline-item" [class.left]="i % 2 === 0" [class.right]="i % 2 !== 0">
+      <div class="timeline-icon">
+        <img [src]="item.icon" alt="{{ item.company }}" />
+      </div>
+      <div class="timeline-content">
+        <h3>{{ item.year }} - {{ item.company }}</h3>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+  

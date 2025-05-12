@@ -1,0 +1,42 @@
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .desc {
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-link {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: auto;
+  }
+
+  .tags {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    span {
+      background: var(--accent);
+      color: var(--primary);
+      border-radius: 12px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}

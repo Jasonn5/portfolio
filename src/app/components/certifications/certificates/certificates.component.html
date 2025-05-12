@@ -1,0 +1,27 @@
+<div class="filters">
+    <app-certificate-filter
+      [selected]="selectedCategories"
+      (toggle)="toggleCategory($event)">
+    </app-certificate-filter>
+  </div>
+  
+  <div class="certifications-list">
+    <div class="cert-card" *ngFor="let cert of filteredCerts">
+      <img [src]="cert.preview" [alt]="cert.title" class="cert-preview" (click)="openCert(cert.url)" />
+      <div class="cert-info">
+        <h3>{{ cert.title }}</h3>
+        <p>{{ cert.description }}</p>
+        <div class="cert-actions">
+            <button (click)="openCert(cert.url)">Open in new tab</button>
+            <button (click)="viewInline(cert)">View here</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="cert-modal" *ngIf="selectedCert">
+    <div class="modal-content">
+      <button class="close-btn" (click)="selectedCert = null">×</button>
+      <iframe [src]="selectedCert.url | safeUrl" frameborder="0"></iframe>
+    </div>
+  </div>

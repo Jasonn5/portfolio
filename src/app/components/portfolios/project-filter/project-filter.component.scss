@@ -1,0 +1,23 @@
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+  
+    button {
+      
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+  
+      &.active {
+        
+        background: var(--primary);
+        color: var(--accent);
+      }
+    }
+  }
+  

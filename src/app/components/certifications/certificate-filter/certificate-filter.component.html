@@ -1,0 +1,8 @@
+<div class="filter-chips">
+    <button
+      *ngFor="let cat of categories"
+      (click)="toggle.emit(cat)"
+      [class.active]="selected.includes(cat)">
+      {{ cat }}
+    </button>
+  </div>

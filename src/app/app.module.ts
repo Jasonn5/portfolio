@@ -1,53 +1,42 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { CertificationsComponent } from './components/certifications/certifications.component';
-import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MenuOptionsComponent } from './components/menu-options/menu-options.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { NavigationOptionsComponent } from './components/navigation-options/navigation-options.component';
-import { ExperienceComponent } from './components/experience/experience.component';
-import { LetsTalkComponent } from './components/lets-talk/lets-talk.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from "ng-recaptcha";
-import { ToastrModule } from 'ngx-toastr';
-import { environment } from 'src/environments/environment ';
+import { PortfolioComponent } from './components/portfolios/portfolio/portfolio.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { CertificatesComponent } from './components/certifications/certificates/certificates.component';
+import { ProjectCardComponent } from './components/portfolios/project-card/project-card.component';
+import { ProjectFilterComponent } from './components/portfolios/project-filter/project-filter.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import { CertificateFilterComponent } from './components/certifications/certificate-filter/certificate-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SkillsComponent,
-    PortfolioComponent,
-    CertificationsComponent,
-    ContactMeComponent,
+    HeaderComponent,
+    MenuOptionsComponent,
     AboutMeComponent,
-    NavigationOptionsComponent,
-    ExperienceComponent,
-    LetsTalkComponent
+    PortfolioComponent,
+    WorkExperienceComponent,
+    SkillsComponent,
+    CertificatesComponent,
+    ProjectCardComponent,
+    ProjectFilterComponent,
+    SafeUrlPipe,
+    CertificateFilterComponent 
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    RecaptchaV3Module,
-    ToastrModule.forRoot()
+    AppRoutingModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
-    {
-      provide: RECAPTCHA_V3_SITE_KEY,
-      useValue: environment.recaptcha.siteKey,
-    },],
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
