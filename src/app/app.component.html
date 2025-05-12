@@ -1,4 +1,7 @@
-<div [ngClass]="themeService.getTheme()  ? 'dark' : 'light'">
-    <app-contact-me></app-contact-me>
+<div class="view-container">
+  <app-header></app-header>
+  <app-menu-options></app-menu-options>
+  <div class="router-container">
     <router-outlet></router-outlet>
+  </div>
 </div>

@@ -1,0 +1,9 @@
+<div class="card">
+    <h3>{{ project.title }}</h3>
+    <p class="desc">{{ project.description }}</p>
+    <a [href]="project.repoUrl" target="_blank" class="demo-link" >Go to Repository</a>
+    <div class="tags">
+      <span *ngFor="let tech of project.technologies">{{ tech }}</span>
+    </div>
+</div>
+  

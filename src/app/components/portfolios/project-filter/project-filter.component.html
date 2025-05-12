@@ -1,0 +1,9 @@
+<div class="filter-chips">
+  <button
+  *ngFor="let tech of filteredTechnologies"
+  (click)="toggle.emit(tech)"
+  [class.active]="selected.includes(tech)">
+  {{ tech }}
+</button>
+  </div>
+  

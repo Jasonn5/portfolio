@@ -1,36 +1,69 @@
-img.card-image {
-    width: auto;
-    max-height: 2.5rem;
-    object-fit: contain;
-}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); // ← aquí defines que sean 6 columnas
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 2rem;
 
-.text-center {
+  .skill-item {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+
+    img {
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 6px #00000088);
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--bg-tooltip);
+      color: var(--tooltip-text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      font-size: 0.85rem;
+      font-weight: 500;  
+      z-index: 9999;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(6px);
+    }
+  }
 }
 
-.card-dark {
-    border-radius: 10px;
-    background-color: #cdc2cd8f;
-    height: 6rem;
-    overflow: hidden;
-    display: flex;  
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr); // 4 íconos por fila en tablets
+  }
 }
 
-.row {
-    margin-bottom: 0.5rem;
-}
-
-.row.text-center {
-    flex: 4;
-    max-height: 4rem;
-}
-
-.row.text-center h6 {
-    flex: 1;
-    overflow: hidden;
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); // 2 íconos por fila en móviles
+  }
 }

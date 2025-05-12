@@ -1,0 +1,17 @@
+<div class="filters">
+    <div class="category-toggle">
+        <button *ngFor="let category of categories" (click)="toggleCategory(category)"
+            [class.active]="selectedCategory === category">
+            {{ category }}
+        </button>
+    </div>
+    <app-project-filter [selected]="selectedTechnologies" [activeCategory]="selectedCategory"
+        (toggle)="toggleTechnology($event)">
+    </app-project-filter>
+
+</div>
+<p class="project-count">Showing {{ filteredProjects.length }} project{{ filteredProjects.length === 1 ? '' : 's' }}</p>
+<div class="projects-grid">
+    <app-project-card *ngFor="let project of filteredProjects" [project]="project">
+    </app-project-card>
+</div>

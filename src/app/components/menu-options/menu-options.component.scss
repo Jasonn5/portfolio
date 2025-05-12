@@ -1,0 +1,134 @@
+@import '../../../variables.scss';
+
+.home-hero__socials {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6.5vw; 
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 1.5rem;
+}
+
+.btn-social-media{
+  background-color: var(--bg-tooltip);
+  color: var(--tooltip-text); 
+  &::after {    
+    background-color: var(--bg-tooltip);
+    color: var(--tooltip-text); 
+  }
+}
+
+.home-hero__social-icon-link {
+  width: 4rem;
+  height: 4rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  &::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 0.5rem); 
+    transform: translateY(-50%);
+    white-space: nowrap; 
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 200;
+    pointer-events: none; 
+  }
+
+  &:hover::after {
+    opacity: 1; 
+    visibility: visible;
+  }
+}
+
+.home-hero__social-icon {
+  width: 60%; 
+  height: 60%; 
+  object-fit: contain;
+}
+
+.home-hero__social-icon-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home-hero__social-icon-link {
+    width: 3.5rem; 
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .home-hero__social-icon-link {
+    width: 3.8rem; 
+    height: 3.8rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .home-hero__social-icon-link {
+    width: 4rem; 
+    height: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-hero__socials {
+    position: fixed;
+    top: 80%;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    width: 100%; 
+    transform: translateY(0); 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    gap: 1rem; 
+    padding: 0.5rem 0; 
+    z-index: 100;
+  }
+
+  .home-hero__social-icon-link {
+    width: 3rem; 
+    height: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    &::after {
+      top: -1.5rem; 
+      left: 50%; 
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    &:hover::after {
+      opacity: 1; 
+      visibility: visible;
+    }
+  }
+
+  .home-hero__social-icon {
+    width: 60%; 
+    height: 60%;
+    object-fit: contain; 
+  }
+
+  .home-hero__social-icon-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(255, 255, 255, 0.1); 
+  }
+}
