@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/",
-    "/certifications",
-    "/porfolio",
-    "/skills",
-    "/work-experience"
-  ]
-}
