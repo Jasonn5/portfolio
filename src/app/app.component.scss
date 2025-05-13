@@ -26,7 +26,6 @@
     color: var(--text);
     transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
   
-    // Scrollbar para navegadores WebKit
     &::-webkit-scrollbar {
       width: 10px;
     }
@@ -47,3 +46,13 @@
     }
   }
   
+@media (max-width: 768px) {
+ .router-container {
+    height: 85vh;
+  }
+
+  app-header {
+    height: 15vh;
+    flex-shrink: 0;
+  }
+}

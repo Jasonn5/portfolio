@@ -25,7 +25,7 @@ export class ProjectFilterComponent {
       'RxJS', 'JWT', 'REST API', 'AWS', 'Chart.js', 'AG-Grid', 'Nebular', 'EmailJS', 'reCAPTCHA',
       'Python', 'C#', 'Java', 'Node.js', 'Express.js', 'MySQL', 'PostgreSQL', 'SQL Server',
       '.NET', '.NET Core', 'Spring Boot', 'Gradle', 'Pytest', 'Locust', 'Automation',
-      'Layered Architecture', 'EspoCRM', 'XUnit', 'Moq', 'MsTest', 'Education'
+      'Layered Architecture', 'XUnit', 'Moq', 'MsTest', 'Education'
     ]
   };
 

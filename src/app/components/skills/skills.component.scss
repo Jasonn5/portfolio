@@ -1,6 +1,6 @@
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); // ← aquí defines que sean 6 columnas
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
   justify-items: center;
   padding: 2rem;
@@ -58,12 +58,12 @@
 
 @media (max-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(4, 1fr); // 4 íconos por fila en tablets
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 600px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr); // 2 íconos por fila en móviles
+    grid-template-columns: repeat(2, 1fr); 
   }
 }

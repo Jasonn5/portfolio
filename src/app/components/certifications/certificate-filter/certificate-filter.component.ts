@@ -9,6 +9,7 @@ export class CertificateFilterComponent {
   @Input() selected: string[] = [];
   @Output() toggle = new EventEmitter<string>();
 
-  categories = ['Work', 'Course', 'Competition', 'Instructor'];
+  categories = ['Work', 'Courses', 'Competitions', 'Instructor', 'Academic Degrees', 'Bootcamps'];
+
 }
 

@@ -108,6 +108,13 @@
   }
 }
 
+.certificates-count {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
 @media (max-width: 1024px) {
   .cert-card {
     flex-direction: column;

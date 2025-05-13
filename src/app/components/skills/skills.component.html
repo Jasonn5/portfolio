@@ -4,7 +4,7 @@
       *ngFor="let skill of skills"
       [attr.data-tooltip]="skill.name"
     >
-      <img [src]="skill.icon" [alt]="skill.name" />
+      <img [src]="skill.icon" [alt]="skill.name" loading="lazy"/>
     </div>
   </div>
   

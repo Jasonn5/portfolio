@@ -83,7 +83,7 @@
 @media (max-width: 768px) {
   .timeline-container {
     .timeline-line {
-      left: 25px; // Mueve la línea un poco a la izquierda
+      left: 25px;
       transform: none;
     }
 
@@ -91,7 +91,7 @@
       width: 100%;
       padding-left: 70px;
       padding-right: 10px;
-      left: 0 !important; // Anula left/right del modo intercalado
+      left: 0 !important; 
       text-align: left !important;
 
       .timeline-icon {
