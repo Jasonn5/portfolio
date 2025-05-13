@@ -19,7 +19,7 @@ export class PortfolioComponent {
 
   toggleCategory(category: string) {
     this.selectedCategory = category;
-    this.selectedTechnologies = []; 
+    this.selectedTechnologies = [];
   }
 
   toggleTechnology(tech: string) {
@@ -88,6 +88,12 @@ export class PortfolioComponent {
       description: "A React frontend for a hotel booking site allowing users to browse hotels, view room availability, and make payments using Stripe. Includes booking history and responsive design.",
       repoUrl: "https://github.com/Jasonn5/enyoi-mod3-front",
       technologies: ["React", "JavaScript", "CSS", "Stripe", "REST API"]
+    },
+    {
+      title: "Hotel Booking Platform Backend",
+      description: "Node.js/Express backend for the hotel booking system. Manages user authentication, room availability, booking history, and payment validation through Stripe. Built with modular architecture and integrates with a MySQL database.",
+      repoUrl: "https://github.com/Jasonn5/enyoi-mod3-back",
+      technologies: ["Node.js", "Express.js", "JavaScript", "MySQL", "JWT", "REST API"]
     },
     {
       title: "EspoCRM QA Automation",

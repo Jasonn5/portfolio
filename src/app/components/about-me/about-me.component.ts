@@ -9,9 +9,9 @@ import { ThemeService } from '../../services/theme.service';
 export class AboutMeComponent {
   constructor(
     public themeService: ThemeService) { }
-  pdfUrl = '../../../assets/resume/Jeyson-Valdivia-resume.pdf';
+  pdfUrl = 'assets/resume/Jeyson-Valdivia-resume.pdf';
   openOrDownloadPDF() {
-    const fileName = 'documento.pdf';
+    const fileName = 'Jeyson_Valdivia_Resume.pdf';
     const link = document.createElement('a');
     link.href = this.pdfUrl;
     link.download = fileName;

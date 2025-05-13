@@ -36,4 +36,5 @@ export class HeaderComponent {
       this.isMobileScreen = window.innerWidth <= 768;
     }
   }
+
 }

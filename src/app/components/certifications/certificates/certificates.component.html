@@ -5,9 +5,10 @@
     </app-certificate-filter>
   </div>
   
+<p class="certificates-count">Showing {{ filteredCerts.length }} certificate{{ filteredCerts.length === 1 ? '' : 's' }}</p>
   <div class="certifications-list">
     <div class="cert-card" *ngFor="let cert of filteredCerts">
-      <img [src]="cert.preview" [alt]="cert.title" class="cert-preview" (click)="openCert(cert.url)" />
+      <img [src]="cert.preview" [alt]="cert.title" class="cert-preview" (click)="openCert(cert.url)" loading="lazy" />
       <div class="cert-info">
         <h3>{{ cert.title }}</h3>
         <p>{{ cert.description }}</p>
