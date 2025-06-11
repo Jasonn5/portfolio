@@ -9,7 +9,7 @@ import { ThemeService } from '../../services/theme.service';
 export class AboutMeComponent {
   constructor(
     public themeService: ThemeService) { }
-  pdfUrl = 'assets/resume/Jeyson-Valdivia-resume.pdf';
+  pdfUrl = 'assets/resume/Jeyson_Valdivia_resume.pdf';
   openOrDownloadPDF() {
     const fileName = 'Jeyson_Valdivia_Resume.pdf';
     const link = document.createElement('a');

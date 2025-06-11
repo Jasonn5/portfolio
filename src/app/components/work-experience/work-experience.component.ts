@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class WorkExperienceComponent {
   timeline = [
     {
-      year: 'Nov 2024 – Feb 2025',
-      company: 'Nice CX-One',
-      icon: 'assets/companies/nice.webp',
-      title: 'Software Engineer In Test Intern',
-      description: `Developed efficient TypeScript-based automated test cases. Refactored legacy tests for better maintainability. Reported critical bugs, enhancing system stability.`
+      year: 'Jan 2025 – Current',
+      company: 'Spartan Soft',
+      icon: 'assets/companies/spartan-soft.webp',
+      title: 'Mid-Senior Full Stack Developer',
+      description: `Led the development of scalable enterprise systems using Angular and .NET Core. Enhanced performance by 15% through SQL optimization. Deployed cloud-native applications on Azure and AWS with CI/CD pipelines. Mentored junior developers and enforced clean architecture standards.`
     },
     {
       year: 'Jun 2024 – Oct 2024',
@@ -41,7 +41,7 @@ export class WorkExperienceComponent {
       icon: 'assets/companies/freelance.webp',
       title: 'Full Stack Developer',
       description: `Collaborated closely with clients to design and deliver tailored web applications. Led end-to-end development using Angular, .NET, and SQL Server, ensuring responsive UIs, API integration, and long-term maintainability.`
-    },    
+    },
     {
       year: 'Jul 2020 – Jun 2021',
       company: 'JabuSoft',
