@@ -26,13 +26,13 @@ export class CertificatesComponent {
       categories: ['Academic Degrees']
     },
     //work    
-    {
+    /* {
       title: 'Software Developer - Spartan Soft',
       description: 'Official employment certificate from Spartan Soft for my role as Software Developer, where I led technical implementations, coordinated directly with clients to gather and refine requirements, and delivered scalable systems using .NET, SQL Server, MySQL, NestJS, and Angular. I also managed deployments on Azure and AWS.',
       preview: 'assets/img/pdf.webp',
       url: 'assets/certificates/spartan-soft.pdf',
       categories: ['Work']
-    },
+    }, */
     {
       title: 'C# Instructor Certificate',
       description: 'Certificate acknowledging my qualification to teach C# .NET, demonstrating advanced understanding of backend development and the ability to mentor others in structured learning environments.',
@@ -61,13 +61,13 @@ export class CertificatesComponent {
       url: 'assets/certificates/bootcamps/bootcamp-fullstack.pdf', 
       categories: ['Bootcamps']
     },
-    {
+/*     {
       title: 'QA Software Testing - NICE CX One',
       description: 'Internship certificate recognizing my contributions as a Software Engineer in Test, where I developed automated test cases using TypeScript, refactored legacy test code, and improved QA pipelines for large-scale enterprise systems.',
       preview: 'assets/img/pdf.webp',
       url: 'assets/certificates/nice-qa.pdf',
       categories: ['Work']
-    },
+    }, */
     {
       title: 'Full Stack Developer - NICE CX One',
       description: 'Development internship where I worked on frontend and backend features using Angular, .NET, and SQL Server. Participated in refactoring, debugging, and deploying enterprise-grade solutions.',
